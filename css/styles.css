@@ -1,0 +1,249 @@
+/*2- Estilos básicos y generales, lo de la imagen es momentáneo, para que no se agregue scroll vertical*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul, ol{
+    list-style: none;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    color:rgb(33, 37, 41);
+    background-color: white;
+}
+h1{
+    padding-top:20px;
+    padding-bottom: 20px;
+    font-size: 40px;
+}
+h3{
+    padding-top:10px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    text-align: left;
+}
+.container-carousel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    text-align: left;
+}
+.container-text{
+    width: 70%;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+/**/
+/*Vamos a dar estilo al CONTENEDOR, en este caso SLIDESHOW, le vamos a dar 100% y posicion relativa para posicionar a 
+sus hijos circulos y flechas encima*/
+/*ESTILOS DE TAMAÑO PARA LAS IMAGENES*/
+/*ESTILOS PARA POSICIONAR AL PADRE RELATIVE*/
+/*SLIDER FULL*/
+.slideshow{
+    width: 70%;
+    position: relative;
+    margin-bottom: 60px;
+}
+.slider li, ul{
+    width: 100%;
+}
+
+.slider li img{
+    width: 100%;
+    height: 500px;
+}
+/*ESTILOS PARA LOS HIJOS, ABSOLUTE Y POSICIONARLOS*/
+/*ESTILOS PARA QUE OCUPEN EL 100% DEL ALTO y ANCHO PARA PODER CENTRARLO DE FORMA VERTICAL*/
+.slider .caption{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+    color: white;
+
+    /*Para no tener problemas*/
+    z-index: 1;
+}
+.slider h1{
+    font-size: 50px;
+}
+.slider p{
+    font-size: 20px;
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.pagination{
+    position: absolute;
+
+    top: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+ .pagination li{
+     font-size: 20px;
+     margin: 2px 5px;
+     color: grey;
+     cursor: pointer;
+ }
+.left, .right{
+    
+    position: absolute;
+
+    z-index: 2;
+    top: 0;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    color: white;
+    font-size: 35px;
+}
+.left{
+    left: 10px;
+}
+.right{
+    right: 10px;
+}
+
+
+@media screen and(max-width:600px){
+    .slider .caption p{
+        display: none;
+    }
+}
+
+/*---------------------------------------------------------------------------------------------*/
+
+/*SLIDER AUTOMATIC*/
+.slideshow-automatic{
+    width: 70%;
+    position: relative;
+    margin-bottom: 60px;
+}
+.slider-automatic li, ul{
+    width: 100%;
+}
+
+.slider-automatic li img{
+    width: 100%;
+    height: 500px;
+}
+
+
+/*---------------------------------------------------------------------------------------------*/
+
+/*SLIDER WITH CONTROLS*/
+.slideshow-controls{
+    width: 70%;
+    position: relative;
+    margin-bottom: 60px;
+}
+.slider-controls li, ul{
+    width: 100%;
+}
+
+.slider-controls li img{
+    width: 100%;
+    height: 500px;
+}
+/*ESTILOS PARA LOS HIJOS, ABSOLUTE Y POSICIONARLOS*/
+/*ESTILOS PARA QUE OCUPEN EL 100% DEL ALTO y ANCHO PARA PODER CENTRARLO DE FORMA VERTICAL*/
+.left-controls, .right-controls{
+    
+    position: absolute;
+
+    z-index: 2;
+    top: 0;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    color: white;
+    font-size: 35px;
+}
+.left-controls{
+    left: 10px;
+}
+.right-controls{
+    right: 10px;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+
+/*SLIDER WITH INDICATORS*/
+
+.slideshow-indicators{
+    width: 70%;
+    position: relative;
+    margin-bottom: 60px;
+}
+.slider-indicators li, ul{
+    width: 100%;
+}
+
+.slider-indicators li img{
+    width: 100%;
+    height: 500px;
+}
+/*ESTILOS PARA LOS HIJOS, ABSOLUTE Y POSICIONARLOS*/
+/*ESTILOS PARA QUE OCUPEN EL 100% DEL ALTO y ANCHO PARA PODER CENTRARLO DE FORMA VERTICAL*/
+.pagination-indicators{
+    position: absolute;
+
+    top: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+ .pagination-indicators li{
+     font-size: 20px;
+     margin: 2px 5px;
+     color: grey;
+     cursor: pointer;
+ }
+.left-indicators, .right-indicators{
+    
+    position: absolute;
+
+    z-index: 2;
+    top: 0;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    color: white;
+    font-size: 35px;
+}
+.left-indicators{
+    left: 10px;
+}
+.right-indicators{
+    right: 10px;
+}
+
+
